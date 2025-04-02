@@ -16,6 +16,7 @@ class AutoVacuumExtend(models.AbstractModel):
             recs.unlink()
             self._cr.commit()
 
+    # Chạy dọn lần lượt các model tạm:
     @api.model
     def cron_clean_transients(self):
         models = [
